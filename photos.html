@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highlights | 10-Ruby</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+      background-color: #f9f7f2; 
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: #2d3436;
+      padding: 60px 20px;
+    }
+
+    .top-nav { 
+      width: 100%;
+      max-width: 1100px; 
+      margin: 0 auto 40px; 
+      text-align: left;
+    }
+    
+    .back-link {
+      text-decoration: none;
+      color: #9b111e;
+      font-weight: 700;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      background: #ffffff;
+      padding: 12px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      border: 1px solid #f1f1e9;
+    }
+
+    .back-link:hover { 
+      background-color: #9b111e;
+      color: #ffffff;
+      transform: translateX(-5px);
+    }
+
+    .header { text-align: center; margin-bottom: 80px; }
+    
+    .header p { 
+      color: #9b111e; 
+      font-weight: 800; 
+      letter-spacing: 5px; 
+      font-size: 13px; 
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .header h1 { 
+      font-size: 84px; 
+      color: #2d3436; 
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 0.8;
+    }
+
+    .gallery-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .item {
+      position: relative;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1.5px solid #f1f1e9;
+      transition: all 0.4s ease;
+    }
+
+    .item:hover {
+      border-color: #9b111e;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(155, 17, 30, 0.05);
+    }
+
+    .img-container {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .item img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    }
+
+    .info { 
+      padding: 30px; 
+      border-top: 6px solid #9b111e;
+    }
+
+    .info h3 { 
+      font-size: 24px; 
+      color: #9b111e;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .info p { 
+      font-size: 15px; 
+      color: #636e72; 
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    @media (max-width: 800px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .header h1 { font-size: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-nav">
+    <a href="index.html" class="back-link">
+      <span>←</span> Back to Portal
+    </a>
+  </div>
+
+  <div class="header">
+    <p>10-RUBY</p>
+    <h1>HIGHLIGHTS</h1>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="item">
+      <div class="img-container"><img src="outreach.jpg" alt="Outreach"></div>
+      <div class="info">
+        <h3>Outreach</h3>
+        <p>A day dedicated to community and the mission of service.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="img-container"><img src="intrams.jpg" alt="Intrams"></div>
+      <div class="info">
+        <h3>Intramurals</h3>
+        <p>Section pride and athletic spirit on the center court.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="img-container"><img src="jco.jpg" alt="JCO"></div>
+      <div class="info">
+        <h3>Joint Campout</h3>
+        <p>Venturing beyond the campus walls to build lasting bonds.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="img-container"><img src="foodfare.jpg" alt="Food Fare"></div>
+      <div class="info">
+        <h3>Food Fare</h3>
+        <p>Celebrating our diversity through flavors and shared moments.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

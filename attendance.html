@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance Tracker | 10-Ruby</title>
+
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: #f9f7f2;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .top-nav {
+      width: 100%;
+      max-width: 1100px;
+      margin-bottom: 25px;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #9b111e;
+      font-weight: 700;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      border: 1px solid #eee;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .back-link:hover {
+      background-color: #9b111e;
+      color: #ffffff;
+    }
+
+    .main-wrapper {
+      width: 100%;
+      max-width: 1100px;
+      background: #ffffff;
+      border-radius: 40px;
+      padding: 50px;
+      display: flex;
+      gap: 30px;
+      box-sizing: border-box;
+      align-items: stretch;
+      box-shadow: 0 30px 60px rgba(155, 17, 30, 0.1);
+      border-top: 8px solid #9b111e;
+    }
+
+    .card {
+      flex: 0 0 320px;
+      background: #fffefb;
+      border-radius: 25px;
+      padding: 35px;
+      border: 1.5px solid #f1f1e9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card h2 {
+      text-align: center;
+      color: #9b111e;
+      margin-bottom: 5px;
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #636e72;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    label {
+      display: block;
+      font-weight: 800;
+      margin-bottom: 8px;
+      font-size: 11px;
+      color: #9b111e;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1.5px solid #eee;
+      border-radius: 12px;
+      background: #ffffff;
+      font-family: inherit;
+      box-sizing: border-box;
+      outline: none;
+      color: #2d3436;
+      transition: border-color 0.3s;
+    }
+
+    select:focus, input:focus {
+      border-color: #9b111e;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      background: #9b111e;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #7d0e18;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(155, 17, 30, 0.3);
+    }
+
+    .chart-box {
+      flex: 1;
+      background: #fffefb;
+      border-radius: 25px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 450px;
+      border: 1.5px solid #f1f1e9;
+    }
+
+    #mpl-output { width: 100%; }
+
+    py-config { display: none; }
+  </style>
+
+  <py-config>
+    packages = ["matplotlib", "numpy"]
+  </py-config>
+</head>
+<body>
+
+  <div class="top-nav">
+    <a href="index.html" class="back-link">← Back to Portal</a>
+  </div>
+
+  <div class="main-wrapper">
+    <div class="card">
+      <h2>Tracker</h2>
+      <p class="subtitle">Section 10-Ruby</p>
+
+      <label>Select Day</label>
+      <select id="day">
+        <option value="0">Monday</option>
+        <option value="1">Tuesday</option>
+        <option value="2">Wednesday</option>
+        <option value="3">Thursday</option>
+        <option value="4" selected>Friday</option>
+      </select>
+
+      <label>Absence Count</label>
+      <input type="number" id="absence" value="9" min="0"/>
+
+      <button id="update-btn" py-click="update_data">Update Tracker</button>
+    </div>
+
+    <div class="chart-box">
+      <div id="mpl-output"></div>
+    </div>
+  </div>
+
+  <script type="py" src="tracker.py"></script>
+</body>
+</html>
