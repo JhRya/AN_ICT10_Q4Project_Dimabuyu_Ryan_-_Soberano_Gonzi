@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Q ICT PROJECT | 10-Ruby</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f9f7f2; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1000px;
+            background: #ffffff;
+            padding: 60px;
+            border-radius: 40px; 
+            box-shadow: 0 40px 80px rgba(155, 17, 30, 0.08);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: #9b111e;
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+        }
+
+        header p {
+            color: #636e72;
+            font-weight: 700;
+            margin-top: 5px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .portal-item {
+            background: #fffefb; 
+            padding: 40px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1.5px solid #f1f1e9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .portal-item:hover {
+            border-color: #9b111e;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(155, 17, 30, 0.1);
+            background: #ffffff;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #9b111e;
+        }
+
+        .portal-item h2 {
+            color: #2d3436;
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .portal-item p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #636e72;
+            margin-bottom: 25px;
+        }
+
+        .btn-entry {
+            display: inline-block;
+            padding: 12px 0;
+            background-color: #9b111e;
+            color: white;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.2s;
+        }
+
+        .portal-item:hover .btn-entry {
+            opacity: 0.9;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #b2bec3;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 850px) {
+            .portal-grid { grid-template-columns: 1fr; }
+            .main-container { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>10 RUBY</h1>
+            <p>CLASS OF 2028</p>
+        </header>
+
+        <div class="portal-grid">
+            <a href="classmates.html" class="portal-item">
+                <div>
+                    <div class="icon">👥</div>
+                    <h2>Classmates</h2>
+                    <p>Batchmates and simple introductions.</p>
+                </div>
+                <span class="btn-entry">Open</span>
+            </a>
+
+            <a href="attendance.html" class="portal-item">
+                <div>
+                    <div class="icon">📈</div>
+                    <h2>Attendance</h2>
+                    <p>Track attendance of students throughout every week.</p>
+                </div>
+                <span class="btn-entry">View</span>
+            </a>
+
+            <a href="photos.html" class="portal-item">
+                <div>
+                    <div class="icon">📸</div>
+                    <h2>Gallery</h2>
+                    <p>Highlights of the school year.</p>
+                </div>
+                <span class="btn-entry">Explore</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            Ryan Dimabuyu | Gonzi Soberano
+        </div>
+    </div>
+
+</body>
+</html>
